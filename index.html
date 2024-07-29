@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="menu">
+        <button id="menu-toggle">Menu</button>
+        <nav id="menu-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <h1>Welcome to My GitHub Page</h1>
     <p>This is a simple HTML page deployed using GitHub Pages.</p>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var nav = document.getElementById('menu-nav');
+            if (nav.style.maxHeight) {
+                nav.style.maxHeight = null;
+            } else {
+                nav.style.maxHeight = nav.scrollHeight + "px";
+            }
+        });
+    </script>
 </body>
 </html>
